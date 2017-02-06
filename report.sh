@@ -1,4 +1,10 @@
-RRBIN="/home/sudip/go-work/src/rentroll/tmp/rentroll"
+RRBIN="${GOPATH}/src/rentroll/tmp/rentroll"
+
+if [ ! -d ${RRBIN} ]; then
+    echo "Rentroll has not been setup"
+    exit 1
+fi
+
 ONESITELOAD="${RRBIN}/importers/onesite/onesiteload"
 CSVLOAD="${RRBIN}/rrloadcsv"
 BUD=ISO
