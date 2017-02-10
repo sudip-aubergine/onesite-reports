@@ -16,11 +16,11 @@ ${RRBIN}/rrnewdb
 ${CSVLOAD} -b ./business.csv >./business.txt 2>&1
 
 # generate reports for each dir which has no `report.txt` file
-for f in */; do
-    REPORT_PATH="./${f}report.txt"
+for dir in $(find . -maxdepth 1 -type d -name "[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]"); do
+    REPORT_PATH="${dir}/report.txt"
     if [ ! -f ${REPORT_PATH} ]; then
-        LOGFILE="./${f}log"
-        ONESITE_CSV="./${f}onesite.csv"
+        LOGFILE="${dir}/log"
+        ONESITE_CSV="${dir}/onesite.csv"
         echo -n "Date/Time:    " >>${LOGFILE}
         date >> ${LOGFILE}
         echo "\nGenerating onesite report for ${ONESITE_CSV} ..." | tee -a ${LOGFILE}
