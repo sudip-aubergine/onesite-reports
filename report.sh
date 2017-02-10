@@ -9,8 +9,13 @@ ONESITELOAD="${RRBIN}/importers/onesite/onesiteload"
 CSVLOAD="${RRBIN}/rrloadcsv"
 BUD=ISO
 
+# create new database, drop it if already exists
+${RRBIN}/rrnewdb
+
+# load business information first
 ${CSVLOAD} -b ./business.csv >./business.txt 2>&1
 
+# generate reports for each dir which has no `report.txt` file
 for f in */; do
     REPORT_PATH="./${f}report.txt"
     if [ ! -f ${REPORT_PATH} ]; then
