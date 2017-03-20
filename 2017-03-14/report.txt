@@ -1,0 +1,25 @@
+Onesite CSV did not import properly. Please look out at the report.
+
+Accord RentRoll Onesite Importer
+Date: 3/14/2017
+Time: 6:07PM IST
+Import File: ./2017-03-14/onesite.csv
+
+Summary
+                                Total       Total                 
+Data Type                       Possible    Imported    Issues    
+------------------------------  ----------  ----------  ----------
+Rentable Types                  0           0           0         
+Custom Attributes               0           0           0         
+Custom Attribute References     0           0           0         
+Transactants                    0           0           0         
+Rentables                       0           0           0         
+Rental Agreements               0           0           0         
+
+DETAILED REPORT BY UNIT
+Input                                                                                                                             
+Line    Unit Name             Description                                                                                         
+------  --------------------  ----------------------------------------------------------------------------------------------------
+                              Required data column(s) missing: UnitDesignation, Email, PhoneNumber, Unit                          
+
+
