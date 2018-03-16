@@ -5,8 +5,8 @@ if [ ! -d ${RRBIN} ]; then
     exit 1
 fi
 
-ONESITELOAD="${RRBIN}/importers/onesite/onesiteload"
-CSVLOAD="${RRBIN}/rrloadcsv"
+ONESITELOAD="${RRBIN}/importers/onesite/onesiteload -noauth"
+CSVLOAD="${RRBIN}/rrloadcsv -noauth"
 BUD=ISO
 
 # create new database, drop it if already exists
